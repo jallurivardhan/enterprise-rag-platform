@@ -16,7 +16,7 @@ export function useVoiceInput(): UseVoiceInputReturn {
   const [transcript, setTranscript] = useState('')
   const [isSupported, setIsSupported] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [recognition, setRecognition] = useState<SpeechRecognition | null>(null)
+  const [recognition, setRecognition] = useState<any>(null)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
