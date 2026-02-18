@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Mail, Lock, User, ArrowRight, Loader2 } from 'lucide-react'
 
+const API_URL = 'https://enterprise-rag-platform.onrender.com'
+
 export default function LoginPage() {
   const router = useRouter()
   const [isLogin, setIsLogin] = useState(true)
@@ -14,7 +16,7 @@ export default function LoginPage() {
     username: '',
     email: '',
     password: '',
-    role: 'user'  // Add this
+    role: 'user'
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -28,7 +30,7 @@ export default function LoginPage() {
       : { username: form.username, email: form.email, password: form.password, role: form.role }
     
     try {
-      const response = await fetch(`http://localhost:8000${endpoint}`, {
+      const response = await fetch(`${API_URL}${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
@@ -41,16 +43,13 @@ export default function LoginPage() {
       
       const data = await response.json()
       
-      // Store token and user
       localStorage.setItem('auth_token', data.access_token)
       localStorage.setItem('user', JSON.stringify(data.user))
       
-      // Redirect to chat
       router.push('/')
     } catch (err: any) {
-      // Better error handling
       if (err.message === 'Failed to fetch' || err.message.includes('fetch')) {
-        setError('Cannot connect to server. Please make sure the backend is running on http://localhost:8000')
+        setError('Cannot connect to server. Please try again later.')
       } else {
         setError(err.message || 'An error occurred. Please try again.')
       }
@@ -62,7 +61,6 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-[#0f172a] flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">
             Enterprise RAG Platform
@@ -72,9 +70,7 @@ export default function LoginPage() {
           </p>
         </div>
         
-        {/* Card */}
         <div className="bg-[#1e293b] rounded-2xl p-8 shadow-xl">
-          {/* Toggle */}
           <div className="flex mb-6 bg-slate-800 rounded-lg p-1">
             <button
               onClick={() => setIsLogin(true)}
@@ -94,14 +90,12 @@ export default function LoginPage() {
             </button>
           </div>
           
-          {/* Error */}
           {error && (
             <div className="mb-4 p-3 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-sm">
               {error}
             </div>
           )}
           
-          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             {!isLogin && (
               <div>
@@ -182,7 +176,6 @@ export default function LoginPage() {
           </form>
         </div>
         
-        {/* Footer */}
         <p className="text-center text-slate-500 text-sm mt-6">
           Developed by Vardhan Jalluri
         </p>
