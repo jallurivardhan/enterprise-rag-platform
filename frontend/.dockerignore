@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.git/
+.gitignore
+*.log
+.env
+.env.*
+.DS_Store
+coverage/
+.npm/

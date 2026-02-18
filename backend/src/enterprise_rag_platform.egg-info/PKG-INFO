@@ -1,0 +1,94 @@
+Metadata-Version: 2.4
+Name: enterprise-rag-platform
+Version: 1.0.0
+Summary: Enterprise-grade Retrieval-Augmented Generation platform with multi-agent orchestration
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.109.0
+Requires-Dist: uvicorn[standard]>=0.27.0
+Requires-Dist: pydantic>=2.5.0
+Requires-Dist: pydantic-settings>=2.1.0
+Requires-Dist: python-multipart>=0.0.6
+Requires-Dist: structlog>=24.1.0
+Requires-Dist: sentence-transformers>=2.3.0
+Requires-Dist: faiss-cpu>=1.7.4
+Requires-Dist: langchain>=0.1.0
+Requires-Dist: langchain-openai>=0.0.5
+Requires-Dist: langchain-community>=0.0.20
+Requires-Dist: pypdf>=3.17.0
+Requires-Dist: python-docx>=1.1.0
+Requires-Dist: tiktoken>=0.5.2
+Requires-Dist: sse-starlette>=1.8.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23.0; extra == "dev"
+Requires-Dist: httpx>=0.26.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+
+# Enterprise RAG Platform - Backend
+
+Enterprise-grade Retrieval-Augmented Generation platform backend with multi-agent orchestration.
+
+## Features
+
+- FastAPI-based REST API
+- Multi-agent system (Planner, Retriever, Validator)
+- Document ingestion (PDF/DOCX)
+- FAISS vector store for embeddings
+- Structured logging with structlog
+- Type-safe configuration with pydantic-settings
+
+## Setup
+
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+2. Create a `.env` file (see `.env.example`):
+```bash
+cp .env.example .env
+```
+
+3. Run the application:
+```bash
+python -m src.main
+```
+
+Or with uvicorn directly:
+```bash
+uvicorn src.main:app --reload
+```
+
+## Project Structure
+
+```
+backend/
+├── src/
+│   ├── api/
+│   │   └── routes/        # API endpoints
+│   ├── agents/            # Multi-agent system
+│   ├── core/              # Configuration and logging
+│   ├── db/                # Vector store and metadata
+│   ├── models/            # Embedding and generator models
+│   ├── services/          # Business logic services
+│   └── main.py            # Application entry point
+└── tests/                 # Test suite
+```
+
+## API Endpoints
+
+- `GET /api/health` - Health check
+- `POST /api/chat` - Chat query (TODO)
+- `GET /api/chat/stream` - Streaming chat (TODO)
+- `POST /api/ingest` - Document ingestion (TODO)
+- `GET /api/ingest/status/{document_id}` - Ingestion status (TODO)
+
+## Development
+
+Run tests:
+```bash
+pytest
+```
