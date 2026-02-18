@@ -74,10 +74,10 @@ export function useVoiceInput(): UseVoiceInputReturn {
   }
 }
 
-// TypeScript declarations for Web Speech API (when not in DOM lib or for webkit prefix)
+// TypeScript declarations for Web Speech API
 declare global {
   interface Window {
-    SpeechRecognition?: new () => SpeechRecognition
-    webkitSpeechRecognition?: new () => SpeechRecognition
+    SpeechRecognition?: any
+    webkitSpeechRecognition?: any
   }
 }
