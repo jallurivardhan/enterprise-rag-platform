@@ -28,13 +28,13 @@ export function useVoiceInput(): UseVoiceInputReturn {
         recognitionInstance.interimResults = true
         recognitionInstance.lang = 'en-US'
 
-        recognitionInstance.onresult = (event: SpeechRecognitionEvent) => {
+        recognitionInstance.onresult = (event: any) => {
           const current = event.resultIndex
           const transcriptText = event.results[current][0].transcript
           setTranscript(transcriptText)
         }
 
-        recognitionInstance.onerror = (event: SpeechRecognitionErrorEvent) => {
+        recognitionInstance.onerror = (event: any) => {
           setError(event.error)
           setIsListening(false)
         }
