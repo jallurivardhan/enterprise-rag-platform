@@ -184,7 +184,7 @@ export default function LoginPage() {
         
         {/* Footer */}
         <p className="text-center text-slate-500 text-sm mt-6">
-          Secure document Q&A powered by AI
+          Developed by Vardhan Jalluri
         </p>
       </div>
     </div>
