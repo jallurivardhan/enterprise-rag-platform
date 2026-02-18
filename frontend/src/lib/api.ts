@@ -1,6 +1,6 @@
 import { ChatRequest, ChatResponse, UploadResponse, Document } from '@/types'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_URL = 'https://enterprise-rag-platform.onrender.com'
 
 /**
  * API client for backend communication
