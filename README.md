@@ -4,9 +4,8 @@
 
 **An enterprise-grade AI document intelligence system built with FastAPI and Next.js**
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_App-blue?style=for-the-badge)](https://enterprise-rag-platform-gamma.vercel.app)
-[![API](https://img.shields.io/badge/API-Render-green?style=for-the-badge)](https://enterprise-rag-platform.onrender.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_App-blue?style=for-the-badge)](https://enterprise-rag-platform-eosin.vercel.app/login)
+[![API](https://img.shields.io/badge/API-Render-green?style=for-the-badge)](https://dashboard.render.com/web/srv-d6amcv8boq4c73dg4tjg)
 
 </div>
 
@@ -39,8 +38,8 @@ Enterprise RAG Platform is a production-grade document intelligence system that 
 
 | Service | URL |
 |---------|-----|
-| **Frontend** | [https://enterprise-rag-platform-gamma.vercel.app](https://enterprise-rag-platform-gamma.vercel.app) |
-| **Backend API** | [https://enterprise-rag-platform.onrender.com](https://enterprise-rag-platform.onrender.com) |
+| **Frontend** | [https://enterprise-rag-platform-gamma.vercel.app](https://enterprise-rag-platform-eosin.vercel.app/login) |
+| **Backend API** | [https://enterprise-rag-platform.onrender.com](https://dashboard.render.com/web/srv-d6amcv8boq4c73dg4tjg) |
 
 ---
 
