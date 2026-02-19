@@ -4,8 +4,8 @@
 
 **An intelligent document Q&A system powered by AI with advanced RAG capabilities**
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-blue?style=for-the-badge)](https://enterprise-rag-platform-gamma.vercel.app)
-[![API](https://img.shields.io/badge/🔗_API-Render-green?style=for-the-badge)](https://enterprise-rag-platform.onrender.com)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-blue?style=for-the-badge)](https://enterprise-rag-platform-eosin.vercel.app/login)
+[![API](https://img.shields.io/badge/🔗_API-Render-green?style=for-the-badge)](https://dashboard.render.com/web/srv-d6amcv8boq4c73dg4tjg)
 
 </div>
 
@@ -38,8 +38,8 @@ Enterprise RAG Platform is a full-stack document intelligence system that allows
 
 | Service | URL |
 |---------|-----|
-| **Frontend** | [https://enterprise-rag-platform-gamma.vercel.app](https://enterprise-rag-platform-gamma.vercel.app) |
-| **Backend API** | [https://enterprise-rag-platform.onrender.com](https://enterprise-rag-platform.onrender.com) |
+| **Frontend** | [https://enterprise-rag-platform-gamma.vercel.app](https://enterprise-rag-platform-eosin.vercel.app/login) |
+| **Backend API** | [https://enterprise-rag-platform.onrender.com](https://dashboard.render.com/web/srv-d6amcv8boq4c73dg4tjg) |
 
 ---
 
