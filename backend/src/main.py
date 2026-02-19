@@ -33,14 +33,10 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# Configure CORS
+# Configure CORS - Allow all Vercel preview URLs
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "https://enterprise-rag-platform-gamma.vercel.app",
-    ],
+    allow_origins=["*"],  # Allow all origins for now to fix the issue
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
