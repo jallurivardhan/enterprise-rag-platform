@@ -63,7 +63,7 @@ cp .env.local.example .env.local
 
 Edit `.env.local` and set:
 ```
-NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_API_URL=https://enterprise-rag-platform.onrender.com
 ```
 
 ## Development

@@ -300,8 +300,8 @@ npm run dev
 | Service | URL |
 |---------|-----|
 | Frontend | http://localhost:3000 |
-| Backend API | http://localhost:8000 |
-| API Docs | http://localhost:8000/docs |
+| Backend API | https://enterprise-rag-platform.onrender.com |
+| API Docs | https://enterprise-rag-platform.onrender.com/docs |
 
 ---
 

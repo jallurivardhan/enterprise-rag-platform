@@ -146,7 +146,7 @@ export function useChat(): UseChatReturn {
       try {
         const token = localStorage.getItem('auth_token')
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/api/chat/stream`,
+          `${process.env.NEXT_PUBLIC_API_URL || 'https://enterprise-rag-platform.onrender.com'}/api/chat/stream`,
           {
             method: 'POST',
             headers: {

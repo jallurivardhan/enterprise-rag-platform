@@ -43,7 +43,7 @@ export default function AnalyticsPage() {
     try {
       setIsRefreshing(true)
       const token = localStorage.getItem('auth_token')
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://enterprise-rag-platform.onrender.com'
       const response = await fetch(`${baseUrl}/api/chat/analytics`, {
         headers: {
           ...(token && { Authorization: `Bearer ${token}` })

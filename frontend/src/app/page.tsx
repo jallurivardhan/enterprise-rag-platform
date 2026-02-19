@@ -126,7 +126,7 @@ export default function Home() {
     }
     
     try {
-      const response = await fetch('http://localhost:8000/api/ingest/documents', {
+      const response = await fetch('https://enterprise-rag-platform.onrender.com/api/ingest/documents', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -223,7 +223,7 @@ export default function Home() {
     setCompareResults({ normal: null, agentic: null })
 
     try {
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://enterprise-rag-platform.onrender.com'
       const token = localStorage.getItem('auth_token')
       const headers: HeadersInit = { 'Content-Type': 'application/json' }
       if (token) headers['Authorization'] = `Bearer ${token}`
@@ -352,7 +352,7 @@ export default function Home() {
     
     try {
       const response = await fetch(
-        `http://localhost:8000/api/ingest/documents/${docId}/permission`,
+        `https://enterprise-rag-platform.onrender.com/api/ingest/documents/${docId}/permission`,
         {
           method: 'PATCH',
           headers: {
@@ -513,7 +513,7 @@ export default function Home() {
         ? messages[messageIndex - 1].content 
         : ''
       
-      const response = await fetch('http://localhost:8000/api/chat/feedback', {
+      const response = await fetch('https://enterprise-rag-platform.onrender.com/api/chat/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

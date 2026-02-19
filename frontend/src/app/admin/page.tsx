@@ -49,9 +49,9 @@ export default function AdminPage() {
     
     try {
       const [usersRes, docsRes, analyticsRes] = await Promise.all([
-        fetch('http://localhost:8000/api/admin/users', { headers }),
-        fetch('http://localhost:8000/api/admin/documents', { headers }),
-        fetch('http://localhost:8000/api/admin/analytics', { headers })
+        fetch('https://enterprise-rag-platform.onrender.com/api/admin/users', { headers }),
+        fetch('https://enterprise-rag-platform.onrender.com/api/admin/documents', { headers }),
+        fetch('https://enterprise-rag-platform.onrender.com/api/admin/analytics', { headers })
       ])
       
       if (usersRes.ok) {
@@ -76,7 +76,7 @@ export default function AdminPage() {
     if (!confirm('Delete this document?')) return
     
     const token = localStorage.getItem('auth_token')
-    const response = await fetch(`http://localhost:8000/api/admin/documents/${docId}`, {
+    const response = await fetch(`https://enterprise-rag-platform.onrender.com/api/admin/documents/${docId}`, {
       method: 'DELETE',
       headers: { 'Authorization': `Bearer ${token}` }
     })
@@ -91,7 +91,7 @@ export default function AdminPage() {
     const token = localStorage.getItem('auth_token')
     
     const response = await fetch(
-      `http://localhost:8000/api/admin/users/${userId}/role?role=${newRole}`,
+      `https://enterprise-rag-platform.onrender.com/api/admin/users/${userId}/role?role=${newRole}`,
       {
         method: 'PATCH',
         headers: { 'Authorization': `Bearer ${token}` }
